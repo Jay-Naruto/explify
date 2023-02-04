@@ -4,14 +4,19 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
+// import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import { styled } from '@mui/material/styles'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
-
+import Accordion from '@mui/material/Accordion'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import Typography from '@mui/material/Typography'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { TestimonialItem } from '@/components/testimonial'
 import { data } from './testimonial.data'
+import styles from '../../styles/faq.module.css'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -63,7 +68,7 @@ const HomeTestimonial: FC = () => {
   }
 
   return (
-    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
+    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
@@ -72,50 +77,79 @@ const HomeTestimonial: FC = () => {
               sx={{
                 position: 'relative',
                 fontSize: { xs: 36, md: 46 },
-                mt: { xs: 0, md: 7 },
+                mt: { xs: 7, md: 7 },
                 mb: 4,
                 lineHeight: 1,
                 fontWeight: 'bold',
               }}
             >
-              Testimonial What our{' '}
-              <Typography
-                component="mark"
-                sx={{
-                  position: 'relative',
-                  color: 'primary.main',
-                  fontSize: 'inherit',
-                  fontWeight: 'inherit',
-                  backgroundColor: 'unset',
-                }}
-              >
-                Students{' '}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    top: { xs: 20, md: 28 },
-                    left: 2,
-                    '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
-                  }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
-                </Box>
-              </Typography>
-              Say
+              FAQ{' '}
             </Typography>
-
-            <StyledSlickContainer>
-              <Slider ref={sliderRef} {...sliderConfig}>
-                {data.map((item, index) => (
-                  <TestimonialItem key={String(index)} item={item} />
-                ))}
-              </Slider>
-            </StyledSlickContainer>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
+              leo lobortis eget.
+            </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+          <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
+              {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
+              <div>
+                <Accordion className={styles.accordian}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                    <Typography>Accordion 1</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                      blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className={styles.accordian}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
+                    <Typography>Accordion 2</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                      blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className={styles.accordian}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
+                    <Typography>Accordion 3</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                      blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className={styles.accordian}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4a-content" id="panel4a-header">
+                    <Typography>Accordion 4</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                      blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion className={styles.accordian}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5a-content" id="panel5a-header">
+                    <Typography>Accordion 5</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                      blandit leo lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
             </Box>
           </Grid>
         </Grid>

@@ -10,6 +10,7 @@ import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import { MentorCardItem } from '@/components/mentor'
 import { data } from './mentors.data'
+import styles from '../../styles/join.module.css'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -66,7 +67,7 @@ const HomeOurMentors: FC = () => {
     // autoplay: true,
     speed: 300,
     slidesToShow: matchMobileView ? 1 : 3,
-    slidesToScroll: 1,
+    slidesToScroll: 0,
     prevArrow: <SliderArrow type="prev" />,
     nextArrow: <SliderArrow type="next" />,
     dots: true,
@@ -78,7 +79,7 @@ const HomeOurMentors: FC = () => {
 
   return (
     <Box
-      id="mentors"
+      id="join-us"
       sx={{
         pt: {
           xs: 6,
@@ -93,14 +94,17 @@ const HomeOurMentors: FC = () => {
     >
       <Container maxWidth="lg">
         <Typography variant="h1" sx={{ fontSize: 40 }}>
-          Our Expert Mentors
+          Join Us
         </Typography>
 
-        <Slider {...sliderConfig}>
+        {/* <Slider {...sliderConfig}> */}
+        <Box className={styles.flex}>
           {data.map((item) => (
             <MentorCardItem key={String(item.id)} item={item} />
           ))}
-        </Slider>
+        </Box>
+
+        {/* </Slider> */}
       </Container>
     </Box>
   )

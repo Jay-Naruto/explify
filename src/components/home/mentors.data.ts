@@ -3,50 +3,21 @@ import type { Mentor } from '@/interfaces/mentor'
 export const data: Array<Mentor> = [
   {
     id: 1,
-    photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
-    name: 'Jhon Dwirian',
-    category: 'UI/UX Design',
+    photo: 'https://education.maharashtra.gov.in/images/school-icon.png',
+    name: 'For Schools',
+    category: '',
+    link: '/schoolform',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    company: {
-      name: 'Grab',
-      logo: '/images/companies/grab.png',
-    },
   },
   {
     id: 2,
-    photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
-    name: 'Leon S Kennedy',
-    category: 'Machine Learning',
+    photo:
+      'https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg',
+    name: 'For Universitiess',
+    category: '',
+    link: '/universityform',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    company: {
-      name: 'Google',
-      logo: '/images/companies/google.png',
-    },
-  },
-  {
-    id: 3,
-    photo: '/images/mentors/noah-buscher-8A7fD6Y5VF8-unsplash.jpg',
-    name: 'Nguyễn Thuy',
-    category: 'Android Development',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    company: {
-      name: 'Airbnb',
-      logo: '/images/companies/airbnb.png',
-    },
-  },
-  {
-    id: 4,
-    photo: '/images/mentors/philip-martin-5aGUyCW_PJw-unsplash.jpg',
-    name: 'Rizki Known',
-    category: 'Fullstack Development',
-    description:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    company: {
-      name: 'Microsoft',
-      logo: '/images/companies/microsoft.png',
-    },
   },
 ]

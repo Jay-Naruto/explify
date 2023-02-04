@@ -9,6 +9,7 @@ import { MUIProvider } from '@/providers'
 import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
+
 import { NextPageWithLayout } from '@/interfaces/layout'
 // import 'slick-carousel/slick/slick-theme.css'
 
@@ -29,8 +30,20 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossOrigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+          crossOrigin="anonymous"
+        ></script>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>React Coursespace</title>
+        <title>Explify</title>
       </Head>
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

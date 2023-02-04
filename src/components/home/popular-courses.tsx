@@ -8,9 +8,12 @@ import { useTheme, styled } from '@mui/material/styles'
 import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
+import styles from '../../styles/time.module.css'
 
 import { data } from './popular-course.data'
 import { CourseCardItem } from '@/components/course'
+import { StyledButton } from '../styled-button'
+import Link from 'next/link'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -89,7 +92,7 @@ const HomePopularCourse: FC = () => {
         backgroundColor: 'background.default',
       }}
     >
-      <Container maxWidth="lg">
+      {/* <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
             <Box
@@ -115,7 +118,63 @@ const HomePopularCourse: FC = () => {
             </Slider>
           </Grid>
         </Grid>
-      </Container>
+      </Container> */}
+      <div className={styles.header}>
+        <Typography
+          component="h2"
+          sx={{
+            position: 'relative',
+            fontSize: { xs: 36, md: 46 },
+            mt: { xs: 7, md: 7 },
+            mb: 4,
+            lineHeight: 1,
+            fontWeight: 'bold',
+          }}
+        >
+          Services{' '}
+        </Typography>
+      </div>
+
+      <div>
+        <main className={styles.main}>
+          <p className={styles.p}>
+            <div className={styles.descp}>
+              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
+              borkdrive. A frighten puggo wow very biscit.
+              <div></div>
+              <div className={styles.serviceImg}>
+                <StyledButton color="primary" size="large" variant="outlined">
+                  <Link href="/services">Know More</Link>
+                </StyledButton>
+              </div>
+            </div>
+          </p>
+          <p className={styles.p}>
+            <div className={styles.descp}>
+              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
+              borkdrive. A frighten puggo wow very biscit.
+              <div></div>
+              <div className={styles.serviceImg}>
+                <StyledButton color="primary" size="large" variant="outlined">
+                  <Link href="/services">Know More</Link>
+                </StyledButton>
+              </div>
+            </div>
+          </p>
+          <p className={styles.p}>
+            <div className={styles.descp}>
+              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
+              borkdrive. A frighten puggo wow very biscit.
+              <div></div>
+              <div className={styles.serviceImg}>
+                <StyledButton color="primary" size="large" variant="outlined">
+                  <Link href="/services">Know More</Link>
+                </StyledButton>
+              </div>
+            </div>
+          </p>
+        </main>
+      </div>
     </Box>
   )
 }

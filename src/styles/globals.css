@@ -25,9 +25,16 @@
 
 body {
   /* background-color: var(--color-background); */
-  background-color: '#fff';
+  background-image: url('https://t4.ftcdn.net/jpg/03/97/13/05/360_F_397130543_IL4ruL7iQbbsTPk8v1v6xahLY3cevvY4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
 }
-
+a {
+  text-decoration: none;
+}
 @-webkit-keyframes click_animation {
   from {
     -webkit-transform: scale(1);

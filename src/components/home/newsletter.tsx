@@ -7,7 +7,7 @@ import { StyledButton } from '../styled-button'
 
 const HomeNewsLetter: FC = () => {
   return (
-    <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
+    <Box id="contact-us" sx={{ backgroundColor: '', py: { xs: 8, md: 10 } }}>
       <Container>
         <Box
           sx={{
@@ -19,9 +19,9 @@ const HomeNewsLetter: FC = () => {
           }}
         >
           <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
-            Subscribe to Our News Letter
+            Contact Us
           </Typography>
-          <Typography sx={{ mb: 6 }}>Subscribe to our newsletter to get information about our courses.</Typography>
+          {/* <Typography sx={{ mb: 6 }}>Email us</Typography> */}
 
           <Box
             sx={{
@@ -33,7 +33,7 @@ const HomeNewsLetter: FC = () => {
               mx: 'auto',
             }}
           >
-            <InputBase
+            {/* <InputBase
               sx={{
                 backgroundColor: 'background.paper',
                 borderRadius: 3,
@@ -44,10 +44,10 @@ const HomeNewsLetter: FC = () => {
                 mb: { xs: 2, md: 0 },
               }}
               placeholder="Enter your Email Address"
-            />
+            /> */}
             <Box>
               <StyledButton disableHoverEffect size="large">
-                Subscribe
+                Email Us
               </StyledButton>
             </Box>
           </Box>
