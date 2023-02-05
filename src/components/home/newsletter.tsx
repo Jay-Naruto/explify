@@ -11,11 +11,12 @@ const HomeNewsLetter: FC = () => {
       <Container>
         <Box
           sx={{
-            backgroundColor: 'secondary.main',
+            backgroundColor: '#f2f2f2',
             borderRadius: 10,
             py: { xs: 4, md: 10 },
             px: { xs: 4, md: 8 },
             textAlign: 'center',
+            border: '1px solid #00C6FF',
           }}
         >
           <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
@@ -46,7 +47,7 @@ const HomeNewsLetter: FC = () => {
               placeholder="Enter your Email Address"
             /> */}
             <Box>
-              <StyledButton disableHoverEffect size="large">
+              <StyledButton color="secondary" disableHoverEffect size="large">
                 Email Us
               </StyledButton>
             </Box>

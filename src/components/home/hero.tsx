@@ -77,13 +77,13 @@ const HomeHero: FC = () => {
                     component="mark"
                     sx={{
                       position: 'relative',
-                      color: 'primary.main',
+                      color: '#00C6FF',
                       fontSize: 'inherit',
                       fontWeight: 'inherit',
                       backgroundColor: 'unset',
                     }}
                   >
-                    Explify....
+                    Easy way to learn new things
                   </Typography>
                   {/* your{' '} */}
 
@@ -91,7 +91,11 @@ const HomeHero: FC = () => {
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
-                <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>{'Description'}</Typography>
+                <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
+                  {
+                    'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups'
+                  }
+                </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
@@ -111,7 +115,7 @@ const HomeHero: FC = () => {
             {/* Sertificate badge */}
 
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+              <Image src="/images/logo.png" width={775} height={787} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>

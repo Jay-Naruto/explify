@@ -10,6 +10,8 @@ import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import styles from '../styles/service.module.css'
+import { StyledButton } from '@/components/styled-button'
+import Link from 'next/link'
 export default function services() {
   return (
     <div>
@@ -46,90 +48,23 @@ export default function services() {
               >
                 Experential Learning{' '}
               </Typography>
-              <Typography>
+              <Typography sx={{ mb: 2 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
+              <StyledButton color="primary" size="large" variant="outlined">
+                <Link href="/experential_Learning">Visit</Link>
+              </StyledButton>
             </Grid>
             <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
               <Box sx={{ width: { xs: '100%', md: '90%' } }}>
                 {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
                 <div>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography>Accordion 1</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel2a-content"
-                      id="panel2a-header"
-                    >
-                      <Typography>Accordion 2</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel3a-content"
-                      id="panel3a-header"
-                    >
-                      <Typography>Accordion 3</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4a-content"
-                      id="panel4a-header"
-                    >
-                      <Typography>Accordion 4</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5a-content"
-                      id="panel5a-header"
-                    >
-                      <Typography>Accordion 5</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                  <img
+                    className={styles.video}
+                    src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png"
+                    alt=""
+                  />
                 </div>
               </Box>
             </Grid>
@@ -154,90 +89,23 @@ export default function services() {
               >
                 Virtual Experience{' '}
               </Typography>
-              <Typography>
+              <Typography sx={{ mb: 2 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
+              <StyledButton color="primary" size="large" variant="outlined">
+                <Link href="/experential_Learning">Visit</Link>
+              </StyledButton>
             </Grid>
             <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
               <Box sx={{ width: { xs: '100%', md: '90%' } }}>
                 {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
                 <div>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography>Accordion 1</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel2a-content"
-                      id="panel2a-header"
-                    >
-                      <Typography>Accordion 2</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel3a-content"
-                      id="panel3a-header"
-                    >
-                      <Typography>Accordion 3</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4a-content"
-                      id="panel4a-header"
-                    >
-                      <Typography>Accordion 4</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5a-content"
-                      id="panel5a-header"
-                    >
-                      <Typography>Accordion 5</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                  <img
+                    className={styles.video}
+                    src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png"
+                    alt=""
+                  />
                 </div>
               </Box>
             </Grid>
@@ -262,90 +130,23 @@ export default function services() {
               >
                 Psychometric Tests{' '}
               </Typography>
-              <Typography>
+              <Typography sx={{ mb: 2 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
+              <StyledButton color="primary" size="large" variant="outlined">
+                <Link href="/psychometric_test">Visit</Link>
+              </StyledButton>
             </Grid>
             <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
               <Box sx={{ width: { xs: '100%', md: '90%' } }}>
                 {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
                 <div>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography>Accordion 1</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel2a-content"
-                      id="panel2a-header"
-                    >
-                      <Typography>Accordion 2</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel3a-content"
-                      id="panel3a-header"
-                    >
-                      <Typography>Accordion 3</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel4a-content"
-                      id="panel4a-header"
-                    >
-                      <Typography>Accordion 4</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion className={styles.accordian}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel5a-content"
-                      id="panel5a-header"
-                    >
-                      <Typography>Accordion 5</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
-                        amet blandit leo lobortis eget.
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
+                  <img
+                    className={styles.video}
+                    src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png"
+                    alt=""
+                  />
                 </div>
               </Box>
             </Grid>

@@ -7,10 +7,7 @@ import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
-    <Box
-      component="footer"
-      sx={{ backgroundColor: 'primary.main', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}
-    >
+    <Box component="footer" sx={{ backgroundColor: '#00C6FF', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}>
       <Container>
         <Grid container spacing={1}>
           <Grid item xs={12} md={5}>

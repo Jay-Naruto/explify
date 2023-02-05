@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['education.maharashtra.gov.in', 'cdn.britannica.com'],
+    domains: ['education.maharashtra.gov.in', 'cdn.britannica.com', 'rainbowclasseshisar.com'],
   },
 }
 

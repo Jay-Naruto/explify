@@ -135,45 +135,54 @@ const HomePopularCourse: FC = () => {
         </Typography>
       </div>
 
-      <div>
-        <main className={styles.main}>
-          <p className={styles.p}>
-            <div className={styles.descp}>
-              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
-              borkdrive. A frighten puggo wow very biscit.
-              <div></div>
-              <div className={styles.serviceImg}>
-                <StyledButton color="primary" size="large" variant="outlined">
-                  <Link href="/services">Know More</Link>
-                </StyledButton>
+      <div className={styles.verticalbox}>
+        <div className={styles.container}>
+          <div className={styles.row}>
+            <div className={styles.col}>
+              <div className={styles.maintimeline}>
+                <div className={styles.timeline}>
+                  <a href="#" className={styles.timelinecontent}>
+                    <span className={styles.timelineyear}>2018</span>
+                    <div className={styles.timelineicon}></div>
+                    <div className={styles.content}>
+                      <h3 className={styles.title}>Web Development</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div className={styles.timeline}>
+                  <a href="#" className={styles.timelinecontent}>
+                    <span className={styles.timelineyear}>2018</span>
+                    <div className={styles.timelineicon}></div>
+                    <div className={styles.content}>
+                      <h3 className={styles.title}>Web Development</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div className={styles.timeline}>
+                  <a href="#" className={styles.timelinecontent}>
+                    <span className={styles.timelineyear}>2018</span>
+                    <div className={styles.timelineicon}></div>
+                    <div className={styles.content}>
+                      <h3 className={styles.title}>Web Development</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </p>
-          <p className={styles.p}>
-            <div className={styles.descp}>
-              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
-              borkdrive. A frighten puggo wow very biscit.
-              <div></div>
-              <div className={styles.serviceImg}>
-                <StyledButton color="primary" size="large" variant="outlined">
-                  <Link href="/services">Know More</Link>
-                </StyledButton>
-              </div>
-            </div>
-          </p>
-          <p className={styles.p}>
-            <div className={styles.descp}>
-              Shoober shooberino adorable doggo many pats, heckin good boys many pats pupper wrinkler, corgo maximum
-              borkdrive. A frighten puggo wow very biscit.
-              <div></div>
-              <div className={styles.serviceImg}>
-                <StyledButton color="primary" size="large" variant="outlined">
-                  <Link href="/services">Know More</Link>
-                </StyledButton>
-              </div>
-            </div>
-          </p>
-        </main>
+          </div>
+        </div>
       </div>
     </Box>
   )

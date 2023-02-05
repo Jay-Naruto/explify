@@ -6,28 +6,24 @@ import styles from '../styles/form.module.css'
 import { Grid, Typography, Box, Container } from '@mui/material'
 
 type UserSubmitForm = {
-  fullname: string
-  username: string
-  email: string
-  password: string
-  confirmPassword: string
-  acceptTerms: boolean
+  name: string
+  board: string
+  strength: string
+  location: string
+  contact: string
+  Fields: string
 }
-export default function universityform() {
+export default function schoolform() {
   const validationSchema = Yup.object().shape({
-    fullname: Yup.string().required('Fullname is required'),
-    username: Yup.string()
-      .required('Username is required')
-      .min(6, 'Username must be at least 6 characters')
-      .max(20, 'Username must not exceed 20 characters'),
-    email: Yup.string().required('Email is required').email('Email is invalid'),
-    password: Yup.string()
-      .required('Password is required')
-      .min(6, 'Password must be at least 6 characters')
-      .max(40, 'Password must not exceed 40 characters'),
-    confirmPassword: Yup.string()
-      .required('Confirm Password is required')
-      .oneOf([Yup.ref('password'), null], 'Confirm Password does not match'),
+    name: Yup.string().required('Name is required'),
+    board: Yup.string().required('Board is required'),
+
+    // strength: Yup.string().required('Email is required').email('Email is invalid'),
+    strength: Yup.string().required('Strength is required'),
+
+    location: Yup.string().required('Location is required'),
+    contact: Yup.string().required('Contact is required'),
+    Fields: Yup.string().required('Fields is required'),
     acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required'),
   })
   const {
@@ -44,8 +40,28 @@ export default function universityform() {
   }
   return (
     <div className={styles.form}>
+      <div className={styles.wrap}>
+        <img className={styles.svg} src="./doodle.png"></img>
+
+        <img className={styles.svg} src="./doodle2.png"></img>
+
+        <img className={styles.svg} src="./doodle3.png"></img>
+
+        <img className={styles.svg} src="./doodle4.png"></img>
+
+        <img className={styles.svg} src="./doodle.png"></img>
+
+        <img className={styles.svg} src="./doodle2.png"></img>
+
+        <img className={styles.svg} src="./doodle3.png"></img>
+
+        <img className={styles.svg} src="./doodle4.png"></img>
+        <img className={styles.svg} src="./doodle.png"></img>
+
+        <img className={styles.svg} src="./doodle2.png"></img>
+      </div>
       <div className={styles.header}></div>
-      <Box id="form1" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f2f2f2' }}>
+      <Box id="form1" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
         <Container>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
@@ -69,9 +85,9 @@ export default function universityform() {
               <Box sx={{ width: '100%' }}>
                 <img
                   style={{ width: '100%' }}
-                  className={styles.sideImg}
                   src="https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg"
                   alt=""
+                  className={styles.sideImg}
                 />
               </Box>
             </Grid>
@@ -87,61 +103,49 @@ export default function universityform() {
                             <label>Full Name</label>
                             <input
                               type="text"
-                              {...register('fullname')}
-                              className={`form-control ${errors.fullname ? 'is-invalid' : ''}`}
+                              {...register('name')}
+                              className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                             />
-                            <div className="invalid-feedback">{errors.fullname?.message}</div>
+                            <div className="invalid-feedback">{errors.name?.message}</div>
                           </div>
 
-                          <div className="form-group">
-                            <label>Username</label>
+                          {/* <div className="form-group">
+                            <label>Board</label>
                             <input
                               type="text"
-                              {...register('username')}
-                              className={`form-control ${errors.username ? 'is-invalid' : ''}`}
+                              {...register('board')}
+                              className={`form-control ${errors.board ? 'is-invalid' : ''}`}
                             />
-                            <div className="invalid-feedback">{errors.username?.message}</div>
-                          </div>
+                            <div className="invalid-feedback">{errors.board?.message}</div>
+                          </div> */}
 
                           <div className="form-group">
-                            <label>Email</label>
+                            <label>Strength</label>
                             <input
                               type="text"
-                              {...register('email')}
-                              className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                              {...register('strength')}
+                              className={`form-control ${errors.strength ? 'is-invalid' : ''}`}
                             />
-                            <div className="invalid-feedback">{errors.email?.message}</div>
+                            <div className="invalid-feedback">{errors.strength?.message}</div>
                           </div>
 
                           <div className="form-group">
-                            <label>Password</label>
+                            <label>Location</label>
                             <input
-                              type="password"
-                              {...register('password')}
-                              className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                              type="text"
+                              {...register('location')}
+                              className={`form-control ${errors.location ? 'is-invalid' : ''}`}
                             />
-                            <div className="invalid-feedback">{errors.password?.message}</div>
+                            <div className="invalid-feedback">{errors.location?.message}</div>
                           </div>
                           <div className="form-group">
-                            <label>Confirm Password</label>
+                            <label>Fields</label>
                             <input
-                              type="password"
-                              {...register('confirmPassword')}
-                              className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+                              type="text"
+                              {...register('Fields')}
+                              className={`form-control ${errors.Fields ? 'is-invalid' : ''}`}
                             />
-                            <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
-                          </div>
-
-                          <div className="form-group form-check">
-                            <input
-                              type="checkbox"
-                              {...register('acceptTerms')}
-                              className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`}
-                            />
-                            <label htmlFor="acceptTerms" className="form-check-label">
-                              I have read and agree to the Terms
-                            </label>
-                            <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
+                            <div className="invalid-feedback">{errors.Fields?.message}</div>
                           </div>
 
                           <div className="form-group">

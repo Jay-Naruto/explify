@@ -85,7 +85,7 @@ export default function schoolform() {
               <Box sx={{ width: '100%' }}>
                 <img
                   style={{ width: '100%' }}
-                  src="https://education.maharashtra.gov.in/images/school-icon.png"
+                  src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
                   alt=""
                   className={styles.sideImg}
                 />
@@ -109,7 +109,7 @@ export default function schoolform() {
                             <div className="invalid-feedback">{errors.name?.message}</div>
                           </div>
 
-                          <div className="form-group">
+                          {/* <div className="form-group">
                             <label>Board</label>
                             <input
                               type="text"
@@ -117,7 +117,7 @@ export default function schoolform() {
                               className={`form-control ${errors.board ? 'is-invalid' : ''}`}
                             />
                             <div className="invalid-feedback">{errors.board?.message}</div>
-                          </div>
+                          </div> */}
 
                           <div className="form-group">
                             <label>Strength</label>
