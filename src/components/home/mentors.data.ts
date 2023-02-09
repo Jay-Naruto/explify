@@ -3,7 +3,7 @@ import type { Mentor } from '@/interfaces/mentor'
 export const data: Array<Mentor> = [
   {
     id: 1,
-    photo: 'https://education.maharashtra.gov.in/images/school-icon.png',
+    photo: './images/school.png',
     name: 'For Schools',
     category: '',
     link: '/schoolform',
@@ -12,8 +12,7 @@ export const data: Array<Mentor> = [
   },
   {
     id: 2,
-    photo:
-      'https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg',
+    photo: './images/school.png',
     name: 'For Classes',
     category: '',
     link: '/classform',
@@ -22,8 +21,7 @@ export const data: Array<Mentor> = [
   },
   {
     id: 3,
-    photo:
-      'https://cdn.britannica.com/85/13085-050-C2E88389/Corpus-Christi-College-University-of-Cambridge-England.jpg',
+    photo: './images/uni.png',
     name: 'For Universities',
     category: '',
     link: '/universityform',

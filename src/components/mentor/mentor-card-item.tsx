@@ -24,11 +24,12 @@ const MentorCardItem: FC<Props> = ({ item }) => {
       <Box
         sx={{
           p: 2,
-          backgroundColor: 'background.paper',
+          backgroundColor: 'transparent',
           borderRadius: 4,
           transition: (theme) => theme.transitions.create(['box-shadow']),
           '&:hover': {
-            boxShadow: 2,
+            boxShadow: ' 1px 1px 1px 1px rgb(255,255,255,0.1);',
+            cursor: 'pointer',
           },
         }}
       >
@@ -37,30 +38,16 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             lineHeight: 0,
             overflow: 'hidden',
             borderRadius: 3,
-            height: 200,
+            height: 300,
             mb: 2,
           }}
         >
-          <img style={{ width: '100%', height: '100%' }} src={item.photo as string} alt={'Img ' + item.id} />
+          <Link href={item.link}>
+            <img style={{ width: '100%', height: '100%' }} src={item.photo as string} alt={'Img ' + item.id} />
+          </Link>
+          {/* <Typography>{item.name}</Typography> */}
         </Box>
-        <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>
-            {item.name}
-          </Typography>
-
-          <Typography sx={{ mb: 2, color: 'text.secondary' }} variant="subtitle1">
-            {item.description}
-          </Typography>
-          <Box sx={{ '& img': { height: 26 } }}>
-            {/* eslint-disable-next-line */}
-            {/* <img src={item.company?.logo} alt={item.company?.name + ' logo'} /> */}
-            {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}> */}
-            <StyledButton color="primary" size="large" variant="outlined">
-              <Link href={item.link}>View</Link>
-            </StyledButton>
-            {/* </ScrollLink> */}
-          </Box>
-        </Box>
+        <Box sx={{ mb: 2 }}></Box>
       </Box>
     </Box>
   )

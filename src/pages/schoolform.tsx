@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
 import styles from '../styles/form.module.css'
 import { Grid, Typography, Box, Container } from '@mui/material'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 type UserSubmitForm = {
   name: string
@@ -39,133 +41,139 @@ export default function schoolform() {
     console.log(JSON.stringify(data, null, 2))
   }
   return (
-    <div className={styles.form}>
-      <div className={styles.wrap}>
-        <img className={styles.svg} src="./doodle.png"></img>
+    <>
+      <Header />
 
-        <img className={styles.svg} src="./doodle2.png"></img>
-
-        <img className={styles.svg} src="./doodle3.png"></img>
-
-        <img className={styles.svg} src="./doodle4.png"></img>
-
-        <img className={styles.svg} src="./doodle.png"></img>
-
-        <img className={styles.svg} src="./doodle2.png"></img>
-
-        <img className={styles.svg} src="./doodle3.png"></img>
-
-        <img className={styles.svg} src="./doodle4.png"></img>
-        <img className={styles.svg} src="./doodle.png"></img>
-
-        <img className={styles.svg} src="./doodle2.png"></img>
-      </div>
-      <div className={styles.header}></div>
-      <Box id="form1" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
-        <Container>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
-              <Typography
-                component="h2"
-                sx={{
-                  position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
-                  mt: { xs: 7, md: 7 },
-                  mb: 4,
-                  lineHeight: 1,
-                  fontWeight: 'bold',
-                }}
-              >
-                Join Us{' '}
-              </Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                blandit leo lobortis eget.
-              </Typography>
-              <Box sx={{ width: '100%' }}>
-                <img
-                  style={{ width: '100%' }}
-                  src="https://education.maharashtra.gov.in/images/school-icon.png"
-                  alt=""
-                  className={styles.sideImg}
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
-              <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-                {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
-                <div>
+      <div className={styles.form}>
+        <div className={styles.header}></div>
+        <Box
+          id="form1"
+          sx={{
+            pb: { xs: 6, md: 10 },
+            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            border: ' 2px solid #E0C781',
+            borderRadius: '20px',
+          }}
+        >
+          <Container>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={12} sm={12} sx={{ display: { md: 'block' } }}>
+                <Box sx={{ width: { xs: '100%', md: '90%' } }}>
+                  {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
                   <div>
                     <div>
-                      <div className="register-form">
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                          <div className="form-group">
-                            <label>Full Name</label>
-                            <input
-                              type="text"
-                              {...register('name')}
-                              className={`form-control ${errors.name ? 'is-invalid' : ''}`}
-                            />
-                            <div className="invalid-feedback">{errors.name?.message}</div>
-                          </div>
+                      <div>
+                        <div className="register-form">
+                          <form className={styles.formBodyFlex} onSubmit={handleSubmit(onSubmit)}>
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Full Name</label>
+                              <input
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
 
-                          <div className="form-group">
-                            <label>Board</label>
-                            <input
-                              type="text"
-                              {...register('board')}
-                              className={`form-control ${errors.board ? 'is-invalid' : ''}`}
-                            />
-                            <div className="invalid-feedback">{errors.board?.message}</div>
-                          </div>
+                                  color: 'white',
+                                }}
+                                type="text"
+                                {...register('name')}
+                                className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.name?.message}</div>
+                            </div>
 
-                          <div className="form-group">
-                            <label>Strength</label>
-                            <input
-                              type="text"
-                              {...register('strength')}
-                              className={`form-control ${errors.strength ? 'is-invalid' : ''}`}
-                            />
-                            <div className="invalid-feedback">{errors.strength?.message}</div>
-                          </div>
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Board</label>
+                              <input
+                                type="text"
+                                {...register('board')}
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
 
-                          <div className="form-group">
-                            <label>Location</label>
-                            <input
-                              type="text"
-                              {...register('location')}
-                              className={`form-control ${errors.location ? 'is-invalid' : ''}`}
-                            />
-                            <div className="invalid-feedback">{errors.location?.message}</div>
-                          </div>
-                          <div className="form-group">
-                            <label>Details</label>
-                            <input
-                              type="text"
-                              {...register('details')}
-                              className={`form-control ${errors.details ? 'is-invalid' : ''}`}
-                            />
-                            <div className="invalid-feedback">{errors.details?.message}</div>
-                          </div>
+                                  color: 'white',
+                                }}
+                                className={`form-control ${errors.board ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.board?.message}</div>
+                            </div>
 
-                          <div className="form-group">
-                            <button type="submit" className="btn btn-primary">
-                              Register
-                            </button>
-                            <button type="button" onClick={() => reset()} className="btn btn-warning float-right">
-                              Reset
-                            </button>
-                          </div>
-                        </form>
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Strength</label>
+                              <input
+                                type="text"
+                                {...register('strength')}
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
+
+                                  color: 'white',
+                                }}
+                                className={`form-control ${errors.strength ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.strength?.message}</div>
+                            </div>
+
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Location</label>
+                              <input
+                                type="text"
+                                {...register('location')}
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
+
+                                  color: 'white',
+                                }}
+                                className={`form-control ${errors.location ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.location?.message}</div>
+                            </div>
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Details</label>
+                              <input
+                                type="text"
+                                {...register('details')}
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
+
+                                  color: 'white',
+                                }}
+                                className={`form-control ${errors.details ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.details?.message}</div>
+                            </div>
+
+                            <div className={styles.formgroup}>
+                              <button type="submit" className="btn btn-primary">
+                                Register
+                              </button>
+                              <button type="button" onClick={() => reset()} className="btn btn-warning float-right">
+                                Reset
+                              </button>
+                            </div>
+                          </form>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Box>
+                </Box>
+              </Grid>
             </Grid>
-          </Grid>
-        </Container>
-      </Box>
-    </div>
+          </Container>
+        </Box>
+      </div>
+      <Footer />
+    </>
   )
 }

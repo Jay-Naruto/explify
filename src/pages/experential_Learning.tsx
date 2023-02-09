@@ -63,7 +63,7 @@ export default function experential_Learning() {
 
   return (
     <div>
-      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f2f2f2' }}>
+      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'rgba(255, 255, 255, 0.08);' }}>
         <Container>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
@@ -76,11 +76,12 @@ export default function experential_Learning() {
                   mb: 4,
                   lineHeight: 1,
                   fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 Experential Learning{' '}
               </Typography>
-              <Typography>
+              <Typography style={{ color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
@@ -116,9 +117,9 @@ export default function experential_Learning() {
               <Box
                 sx={{
                   p: 2,
-                  backgroundColor: 'background.paper',
+                  backgroundColor: '#fff',
                   borderRadius: 4,
-                  border: '1px solid #00c6ff',
+                  border: '1px solid #fff',
 
                   transition: (theme) => theme.transitions.create(['box-shadow']),
                   '&:hover': {
@@ -138,7 +139,7 @@ export default function experential_Learning() {
                   <img style={{ width: '100%', height: '100%' }} src={data.photo} alt={'Img '} />
                 </Box>
                 <Box sx={{ mb: 2 }}>
-                  <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem' }}>
+                  <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem', color: 'black' }}>
                     {data.name}
                   </Typography>
 

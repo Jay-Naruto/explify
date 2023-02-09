@@ -25,7 +25,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
       sx={{
         backgroundColor: 'background.paper',
         color: 'primary.main',
-        '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
+        '&:hover': { backgroundColor: 'transparent', color: 'primary.contrastText' },
         bottom: '-28px !important',
         left: 'unset !important',
         right: type === 'prev' ? '60px !important' : '0 !important',
@@ -89,16 +89,31 @@ const HomeOurMentors: FC = () => {
           xs: 8,
           md: 12,
         },
-        backgroundColor: '#ecf3f3',
+        backgroundColor: 'transparent',
       }}
     >
-      <Container maxWidth="lg">
-        <Typography variant="h1" sx={{ fontSize: 40 }}>
-          Join Us
+      <Container
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+        maxWidth="lg"
+      >
+        <Typography variant="h1" sx={{ fontSize: 40, color: 'white' }}>
+          Connect With Us
         </Typography>
 
         {/* <Slider {...sliderConfig}> */}
-        <Box className={styles.flex}>
+        <Box
+          className={styles.flex}
+          sx={{
+            border: '2px solid #7170C4',
+            borderTop: 'none',
+            borderRadius: '20px',
+          }}
+        >
           {data.map((item) => (
             <MentorCardItem key={String(item.id)} item={item} />
           ))}

@@ -7,7 +7,8 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  height: 100vh;
+  height: '100%';
+  margin-bottom: 50px;
 }
 .form div {
   /* width: 50%; */
@@ -24,9 +25,7 @@
   margin-top: 20px;
   border-radius: 20px;
 }
-.wrap {
-  perspective-origin: 50% 50%;
-}
+
 @media screen and (max-width: 1000px) {
   .wrap {
     display: none;
@@ -43,149 +42,50 @@
     height: 100%;
   }
 }
-.svg {
-  stroke: #7ceaa4;
-  position: absolute;
-  bottom: -10vh;
-  transform-style: preserve-3d;
+
+.formBodyFlex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 600px;
+  flex-wrap: wrap;
+  padding-top: 50px;
 }
-.svg:nth-child(1) {
-  left: 12%;
-  animation: raise1 21s linear infinite;
-  animation-delay: -2s;
-  transform: scale(-0.3) rotate(334deg);
-  z-index: -6;
-  filter: blur(-5px);
+.formBodyFlex input {
+  /* margin: 10px; */
+  height: 50px;
+  width: 280px;
 }
-@keyframes raise1 {
-  to {
-    bottom: 150vh;
-    transform: scale(-0.3) rotate(342deg);
+
+@media screen and (max-width: 1000px) {
+  .formBodyFlex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .formBodyFlex input {
+    /* margin: 10px; */
+    height: 40px;
+    width: 100%;
   }
 }
-.svg:nth-child(2) {
-  left: 94%;
-  animation: raise2 17s linear infinite;
-  animation-delay: -1s;
-  transform: scale(0) rotate(299deg);
-  z-index: -5;
-  filter: blur(-4px);
+
+.formgroup {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
-@keyframes raise2 {
-  to {
-    bottom: 150vh;
-    transform: scale(0) rotate(264deg);
-  }
-}
-.svg:nth-child(3) {
-  left: 46%;
-  animation: raise3 14s linear infinite;
-  animation-delay: -3s;
-  transform: scale(0.3) rotate(88deg);
-  z-index: -4;
-  filter: blur(-3px);
-}
-@keyframes raise3 {
-  to {
-    bottom: 150vh;
-    transform: scale(0.3) rotate(82deg);
-  }
-}
-.svg:nth-child(4) {
-  left: 73%;
-  animation: raise4 11s linear infinite;
-  animation-delay: 0s;
-  transform: scale(0.6) rotate(153deg);
-  z-index: -3;
-  filter: blur(-2px);
-}
-@keyframes raise4 {
-  to {
-    bottom: 150vh;
-    transform: scale(0.6) rotate(308deg);
-  }
-}
-.svg:nth-child(5) {
-  left: -5%;
-  animation: raise5 19s linear infinite;
-  animation-delay: -1s;
-  transform: scale(0.9) rotate(233deg);
-  z-index: -2;
-  filter: blur(-1px);
-}
-@keyframes raise5 {
-  to {
-    bottom: 150vh;
-    transform: scale(0.9) rotate(349deg);
-  }
-}
-.svg:nth-child(6) {
-  left: 21%;
-  animation: raise6 16s linear infinite;
-  animation-delay: -1s;
-  transform: scale(1.2) rotate(179deg);
-  z-index: -1;
-  filter: blur(0px);
-}
-@keyframes raise6 {
-  to {
-    bottom: 150vh;
-    transform: scale(1.2) rotate(137deg);
-  }
-}
-.svg:nth-child(7) {
-  left: 86%;
-  animation: raise7 9s linear infinite;
-  animation-delay: -4s;
-  transform: scale(1.5) rotate(66deg);
-  z-index: 0;
-  filter: blur(1px);
-}
-@keyframes raise7 {
-  to {
-    bottom: 150vh;
-    transform: scale(1.5) rotate(19deg);
-  }
-}
-.svg:nth-child(8) {
-  left: 44%;
-  animation: raise8 9s linear infinite;
-  animation-delay: -1s;
-  transform: scale(1.8) rotate(260deg);
-  z-index: 1;
-  filter: blur(2px);
-}
-@keyframes raise8 {
-  to {
-    bottom: 150vh;
-    transform: scale(1.8) rotate(86deg);
-  }
-}
-.svg:nth-child(9) {
-  left: 1%;
-  animation: raise9 20s linear infinite;
-  animation-delay: -3s;
-  transform: scale(2.1) rotate(360deg);
-  z-index: 2;
-  filter: blur(3px);
-}
-@keyframes raise9 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.1) rotate(296deg);
-  }
-}
-.svg:nth-child(10) {
-  left: 6%;
-  animation: raise10 20s linear infinite;
-  animation-delay: -1s;
-  transform: scale(0.5) rotate(162deg);
-  z-index: 3;
-  filter: blur(4px);
-}
-@keyframes raise10 {
-  to {
-    bottom: 150vh;
-    transform: scale(2.4) rotate(212deg);
-  }
+
+.formgroup button {
+  background: #e0c781;
+  border-radius: 83px;
+  color: black;
+  padding: 10px 50px;
+  font-size: 15px;
+  font-weight: 500;
 }

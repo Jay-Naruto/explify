@@ -24,16 +24,23 @@
 }
 
 body {
-  /* background-color: var(--color-background); */
-  background-image: url('https://t4.ftcdn.net/jpg/03/97/13/05/360_F_397130543_IL4ruL7iQbbsTPk8v1v6xahLY3cevvY4.jpg');
+  /* background-color: #000235; */
+  /* background-image: url('https://t4.ftcdn.net/jpg/03/97/13/05/360_F_397130543_IL4ruL7iQbbsTPk8v1v6xahLY3cevvY4.jpg'); */
+  background-image: url('../../public/images/bg.png');
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
+  height: 100vh;
+}
+::placeholder {
+  color: white;
 }
 a {
   text-decoration: none;
+  /* color: white; */
 }
 @-webkit-keyframes click_animation {
   from {

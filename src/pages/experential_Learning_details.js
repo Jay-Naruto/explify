@@ -25,6 +25,7 @@ export default function experential_Learning_details() {
                   mb: 4,
                   lineHeight: 1,
                   fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 Description{' '}

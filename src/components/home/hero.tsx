@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import styles from '../../styles/hero.module.css'
 
 interface Exp {
   label: string
@@ -62,32 +63,9 @@ const HomeHero: FC = () => {
                 justifyContent: 'center',
               }}
             >
-              <Box sx={{ mb: 3 }}>
-                <Typography
-                  component="h2"
-                  sx={{
-                    position: 'relative',
-                    fontSize: { xs: 40, md: 72 },
-                    letterSpacing: 1.5,
-                    fontWeight: 'bold',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  <Typography
-                    component="mark"
-                    sx={{
-                      position: 'relative',
-                      color: '#00C6FF',
-                      fontSize: 'inherit',
-                      fontWeight: 'inherit',
-                      backgroundColor: 'unset',
-                    }}
-                  >
-                    Easy way to learn new things
-                  </Typography>
-                  {/* your{' '} */}
-
-                  <br />
+              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
+                <Typography sx={{ color: 'white', lineHeight: 1, fontSize: 70, fontWeight: 700 }}>
+                  {'Discover Best School & Uni for you'}
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
@@ -97,16 +75,12 @@ const HomeHero: FC = () => {
                   }
                 </Typography>
               </Box>
-              <Box sx={{ '& button': { mr: 2 } }}>
+              <Box sx={{ '& button': { mr: 2 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained">
-                    Button
-                  </StyledButton>
+                  <button className={styles.heroBtn1}>Button</button>
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined">
-                    Button
-                  </StyledButton>
+                  <button className={styles.heroBtn2}>Button</button>
                 </ScrollLink>
               </Box>
             </Box>
@@ -115,12 +89,15 @@ const HomeHero: FC = () => {
             {/* Sertificate badge */}
 
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/logo.png" width={775} height={787} alt="Hero img" />
+              <Image src="/images/image 16.png" width={775} height={787} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
 
         {/* Experience */}
+      </Container>
+      <Container>
+        <img className={styles.options} src="./images/options.png" alt="" />
       </Container>
     </Box>
   )

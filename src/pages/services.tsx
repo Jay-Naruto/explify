@@ -31,10 +31,27 @@ export default function services() {
         </Typography>
       </div>
 
-      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f2f2f2' }}>
+      <Box
+        id="services"
+        sx={{
+          pb: { xs: 6, md: 10 },
+          background: '#000235',
+        }}
+      >
         <Container>
           <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
+            <Grid
+              sx={{
+                pb: { xs: 6, md: 10 },
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '3px solid #E0C781',
+                borderRadius: '39px',
+                width: '100%',
+              }}
+              item
+              xs={12}
+              md={6}
+            >
               <Typography
                 component="h2"
                 sx={{
@@ -44,11 +61,12 @@ export default function services() {
                   mb: 4,
                   lineHeight: 1,
                   fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 Experential Learning{' '}
               </Typography>
-              <Typography sx={{ mb: 2 }}>
+              <Typography sx={{ mb: 2, color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
@@ -72,10 +90,21 @@ export default function services() {
         </Container>
       </Box>
 
-      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f2f2f2' }}>
+      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
         <Container>
           <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                pb: { xs: 6, md: 10 },
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '3px solid #E0C781',
+                borderRadius: '39px',
+                width: '100%',
+              }}
+            >
               <Typography
                 component="h2"
                 sx={{
@@ -85,11 +114,12 @@ export default function services() {
                   mb: 4,
                   lineHeight: 1,
                   fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 Virtual Experience{' '}
               </Typography>
-              <Typography sx={{ mb: 2 }}>
+              <Typography sx={{ mb: 2, color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>
@@ -113,10 +143,21 @@ export default function services() {
         </Container>
       </Box>
 
-      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f2f2f2' }}>
+      <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#000235' }}>
         <Container>
           <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                pb: { xs: 6, md: 10 },
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '3px solid #E0C781',
+                borderRadius: '39px',
+                width: '100%',
+              }}
+            >
               <Typography
                 component="h2"
                 sx={{
@@ -126,11 +167,12 @@ export default function services() {
                   mb: 4,
                   lineHeight: 1,
                   fontWeight: 'bold',
+                  color: 'white',
                 }}
               >
                 Psychometric Tests{' '}
               </Typography>
-              <Typography sx={{ mb: 2 }}>
+              <Typography sx={{ mb: 2, color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget.
               </Typography>

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
@@ -14,7 +14,7 @@ import { data } from './popular-course.data'
 import { CourseCardItem } from '@/components/course'
 import { StyledButton } from '../styled-button'
 import Link from 'next/link'
-
+import $ from 'jquery'
 interface SliderArrowArrow {
   onClick?: () => void
   type: 'next' | 'prev'
@@ -62,6 +62,39 @@ const StyledDots = styled('ul')(({ theme }) => ({
 }))
 
 const HomePopularCourse: FC = () => {
+  const [time1, setTime1] = useState<Number>()
+  const [time2, setTime2] = useState<Number>()
+
+  const [time3, setTime3] = useState<Number>()
+  useEffect(() => {
+    $(window).scroll(function () {
+      console.log($(window).scrollTop())
+      if ($(window).scrollTop() > 550) {
+        setTime1(1)
+      } else if ($(window).scrollTop() < 550) {
+        setTime1(0)
+      }
+    })
+
+    $(window).scroll(function () {
+      console.log($(window).scrollTop())
+      if ($(window).scrollTop() > 800) {
+        setTime2(1)
+      } else if ($(window).scrollTop() < 800) {
+        setTime2(0)
+      }
+    })
+
+    $(window).scroll(function () {
+      console.log($(window).scrollTop())
+      if ($(window).scrollTop() > 1000) {
+        setTime3(1)
+      } else if ($(window).scrollTop() < 1000) {
+        setTime3(0)
+      }
+    })
+  })
+
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
@@ -89,7 +122,7 @@ const HomePopularCourse: FC = () => {
           md: 8,
         },
         pb: 14,
-        backgroundColor: 'background.default',
+        backgroundColor: '',
       }}
     >
       {/* <Container maxWidth="lg">
@@ -125,13 +158,14 @@ const HomePopularCourse: FC = () => {
           sx={{
             position: 'relative',
             fontSize: { xs: 36, md: 46 },
-            mt: { xs: 7, md: 7 },
-            mb: 4,
+            mt: { xs: 8, md: 9 },
+            mb: 8,
             lineHeight: 1,
             fontWeight: 'bold',
+            color: 'white',
           }}
         >
-          Services{' '}
+          Our Services{' '}
         </Typography>
       </div>
 
@@ -140,42 +174,94 @@ const HomePopularCourse: FC = () => {
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.maintimeline}>
-                <div className={styles.timeline}>
+                <div
+                  id="timeline"
+                  style={
+                    time1 === 1
+                      ? { opacity: 1, transition: 'max-width 0.5s ease-in', maxWidth: '100%' }
+                      : { opacity: 0, transition: 'all 0.5s ease-in', maxWidth: 0 }
+                  }
+                  className={styles.timeline}
+                >
                   <a href="#" className={styles.timelinecontent}>
-                    <span className={styles.timelineyear}>2018</span>
+                    <span className={styles.timelineyear}>
+                      <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+                    </span>
                     <div className={styles.timelineicon}></div>
                     <div className={styles.content}>
-                      <h3 className={styles.title}>Web Development</h3>
+                      <h3 className={styles.title}>Experential Learning</h3>
                       <p className={styles.description}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s.
                       </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
                     </div>
                   </a>
                 </div>
-                <div className={styles.timeline}>
+                <div
+                  style={
+                    time2 === 1
+                      ? { opacity: 1, transition: 'max-width 0.5s ease-out', maxWidth: '100%' }
+                      : { opacity: 0, transition: 'all 0.5s ease-out', maxWidth: 0 }
+                  }
+                  className={styles.timeline}
+                >
                   <a href="#" className={styles.timelinecontent}>
-                    <span className={styles.timelineyear}>2018</span>
+                    <span className={styles.timelineyear}>
+                      <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+                    </span>
                     <div className={styles.timelineicon}></div>
                     <div className={styles.content}>
-                      <h3 className={styles.title}>Web Development</h3>
+                      <h3 className={styles.title}>Virtual Experience</h3>
                       <p className={styles.description}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s.
                       </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
                     </div>
                   </a>
                 </div>
-                <div className={styles.timeline}>
+                <div
+                  style={
+                    time3 === 1
+                      ? { opacity: 1, transition: 'max-width 0.5s ease-out', maxWidth: '100%' }
+                      : { opacity: 0, transition: 'all 0.5s ease-out', maxWidth: 0 }
+                  }
+                  className={styles.timeline}
+                >
                   <a href="#" className={styles.timelinecontent}>
-                    <span className={styles.timelineyear}>2018</span>
+                    <span className={styles.timelineyear}>
+                      <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+                    </span>
                     <div className={styles.timelineicon}></div>
                     <div className={styles.content}>
-                      <h3 className={styles.title}>Web Development</h3>
+                      <h3 className={styles.title}>Psychometric Test</h3>
                       <p className={styles.description}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s.
                       </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
                     </div>
                   </a>
                 </div>

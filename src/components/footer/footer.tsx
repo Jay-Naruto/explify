@@ -7,16 +7,21 @@ import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: '#00C6FF', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}>
+    <Box
+      component="footer"
+      sx={{
+        background: 'linear-gradient(277.69deg, #AAD9D9 -9.79%, #7D7DDC 84.42%, #9090DC 84.42%)',
+        py: { xs: 6, md: 10 },
+        color: 'primary.contrastText',
+      }}
+    >
       <Container>
         <Grid container spacing={1}>
           <Grid item xs={12} md={5}>
             <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
-              <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
-                ......
-              </Typography>
-              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                .......
+              <img src="./images/explify.png" alt="" />
+              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2, mt: 2, color: 'black' }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
               </Typography>
               <FooterSocialLinks />
             </Box>

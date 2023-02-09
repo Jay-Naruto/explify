@@ -70,86 +70,57 @@ const HomeTestimonial: FC = () => {
   return (
     <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
       <Container>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
-            <Typography
-              component="h2"
+        <Grid sx={{}} container spacing={5}>
+          <Grid sx={{ width: '100%' }} item xs={12} md={6} sm={12}>
+            <img style={{ width: '100%' }} src="./images/Other 18.png" alt="" />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              width: { xs: '100%', md: '100%' },
+              display: { xs: 'flex', md: 'flex' },
+              justifyContent: { xs: 'center', md: 'center' },
+              alignItems: { xs: 'center', md: 'center' },
+              flexDirection: { xs: 'column', md: 'column' },
+            }}
+          >
+            <Box
               sx={{
-                position: 'relative',
-                fontSize: { xs: 36, md: 46 },
-                mt: { xs: 7, md: 7 },
-                mb: 4,
-                lineHeight: 1,
-                fontWeight: 'bold',
+                width: { xs: '100%', md: '100%' },
+                display: { xs: 'flex', md: 'flex' },
+                justifyContent: { xs: 'center', md: 'center' },
+                alignItems: { xs: 'center', md: 'flex-start' },
+                flexDirection: { xs: 'column', md: 'column' },
+                textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              FAQ{' '}
-            </Typography>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit
-              leo lobortis eget.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
-            <Box sx={{ width: { xs: '100%', md: '90%' } }}>
               {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
-              <div>
-                <Accordion className={styles.accordian}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                    <Typography>Accordion 1</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                      blandit leo lobortis eget.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className={styles.accordian}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-                    <Typography>Accordion 2</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                      blandit leo lobortis eget.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className={styles.accordian}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3a-content" id="panel3a-header">
-                    <Typography>Accordion 3</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                      blandit leo lobortis eget.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className={styles.accordian}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4a-content" id="panel4a-header">
-                    <Typography>Accordion 4</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                      blandit leo lobortis eget.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion className={styles.accordian}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel5a-content" id="panel5a-header">
-                    <Typography>Accordion 5</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
-                      blandit leo lobortis eget.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </div>
+
+              <Typography sx={{ color: 'white', mt: { xs: 0, md: 0 } }}>About Us</Typography>
+              <Typography
+                component="h2"
+                sx={{
+                  position: 'relative',
+                  fontSize: { xs: 46, md: 46 },
+                  mt: { xs: 1, md: 1 },
+                  mb: 4,
+                  lineHeight: 1,
+                  fontWeight: 'bold',
+                  color: 'white',
+                }}
+              >
+                Who We Are?{' '}
+              </Typography>
+              <Typography sx={{ color: 'white', fontSize: { xs: 20, md: 20 } }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
+                blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                eget.
+              </Typography>
             </Box>
           </Grid>
         </Grid>

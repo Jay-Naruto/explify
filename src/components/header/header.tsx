@@ -14,11 +14,22 @@ const Header: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
+    <Box sx={{ backgroundColor: 'transparent' }}>
       <Container sx={{ py: { xs: 2, md: 3 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Logo />
-          <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
+          <Box
+            sx={{
+              display: {
+                xs: 'inline-flex',
+                md: 'none',
+                backgroundColor: 'white',
+                position: 'relative',
+                bottom: '20px',
+                borderRadius: '20px',
+              },
+            }}
+          >
             <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
               <Menu />
             </IconButton>
@@ -52,6 +63,7 @@ const Header: FC = () => {
                   position: 'fixed',
                   top: 10,
                   right: 10,
+                  backgroundColor: 'white',
                 }}
                 onClick={() => setVisibleMenu(!visibleMenu)}
               >
